@@ -1,0 +1,7 @@
+{
+  "name": "promotores",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
