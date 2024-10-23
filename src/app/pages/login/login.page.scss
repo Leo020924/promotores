@@ -1,0 +1,60 @@
+/* Estilos generales para el fondo */
+ion-content {
+    --background: linear-gradient(180deg, #003366 0%, #0044cc 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column; /* Para alinear el logo y el formulario en columna */
+  }
+  
+  /* Contenedor del formulario */
+  form {
+    background: rgba(0, 68, 204, 0.2); 
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    margin-top: 20px; /* Para separar un poco el formulario del logo */
+  }
+  
+  /* Logo centrado */
+  .header-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .header-logo img {
+    width: 80px;
+    height: auto;
+  }
+  
+  /* Estilo de los inputs */
+  ion-item {
+    --background: transparent;
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  }
+  
+  ion-label {
+    color: #ffffff;
+    font-weight: 300;
+  }
+  
+  ion-input {
+    color: #ffffff;
+  }
+  
+  /* Botón de login */
+  ion-button {
+    --background: linear-gradient(90deg, #00cfff 0%, #00aaff 100%);
+    --color: #ffffff;
+    border-radius: 50px;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  
