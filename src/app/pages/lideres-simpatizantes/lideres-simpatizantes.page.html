@@ -8,25 +8,26 @@
 </ion-header>
 <ion-content>
   <ion-router-outlet id="main-content"></ion-router-outlet>
-  <ion-card (click)="navigateToCoordinadores()">
+
+  <ion-card class="custom-card" (click)="navigateToCoordinadores()">
     <img
-    alt="Silhouette of mountains"
-    src="https://cdn-icons-png.flaticon.com/512/2472/2472947.png"
-    style="width: 400px; height: 300px;"
+      alt="Silhouette of mountains"
+      src="https://cdn-icons-png.flaticon.com/512/2472/2472947.png"
+      style="width: 100%; height: 200px;"
     />
     <ion-card-header>
-      <ion-card-title style="font-size: 28px;">Registro de Simpatizantes</ion-card-title>
+      <ion-card-title class="custom-title">Registro de Simpatizantes</ion-card-title>
     </ion-card-header>
   </ion-card>
 
-  <ion-card (click)="navigateToSimpatizantes()">
+  <ion-card class="custom-card" (click)="navigateToSimpatizantes()">
     <img
-    alt="Silhouette of mountains"
-    src="https://cdn-icons-png.flaticon.com/512/6323/6323073.png"
-    style="width: 400px; height: 300px;"
+      alt="Silhouette of mountains"
+      src="https://cdn-icons-png.flaticon.com/512/6323/6323073.png"
+      style="width: 100%; height: 200px;"
     />
     <ion-card-header>
-      <ion-card-title style="font-size: 27px;">Registro de Coordinadores</ion-card-title>
+      <ion-card-title class="custom-title">Registro de Coordinadores</ion-card-title>
     </ion-card-header>
   </ion-card>
 </ion-content>

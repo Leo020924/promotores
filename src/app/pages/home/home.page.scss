@@ -1,4 +1,42 @@
-.small-title {
-    font-size: 14px; /* Ajusta este tamaño según tus necesidades */
-    font-weight: normal; /* Puedes cambiar el peso si lo deseas */
-}
+ion-header {
+    background: linear-gradient(to right, #002f7e, #0057d1);
+    color: #fff !important;
+    --border-radius: 0px;
+  }
+  
+  .custom-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px; /* Ajusta la posición */
+  }
+  
+  .custom-card {
+    width: 95%;
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Más pronunciado */
+  }
+  
+  ion-card-content {
+    padding: 0;
+  }
+  
+  ion-item {
+    --border-color: #ddd;
+    border-bottom: 1px solid var(--border-color);
+    padding: 15px 20px; /* Mayor espaciado */
+    font-size: 18px;
+    color: #333;
+  }
+  
+  ion-label {
+    font-weight: bold; /* Letras más fuertes */
+    color: #333;
+  }
+  
+  ion-toolbar {
+    --background: transparent;
+    --border-radius: 0px;
+  }
+  

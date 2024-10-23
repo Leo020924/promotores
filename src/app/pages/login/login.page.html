@@ -1,19 +1,29 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Login</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true" style="background-color: #007bff;">
+  <div class="login-container">
 
-<ion-content>
-  <form #loginForm="ngForm">
-    <ion-item>
-      <ion-label position="floating" >Email</ion-label>
-      <ion-input type="email" [(ngModel)]="email" name="email" required></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label position="floating">Password</ion-label>
-      <ion-input type="password" [(ngModel)]="password" name="password" required></ion-input>
-    </ion-item>
-    <ion-button expand="full" type="submit" (click)="iniciar_sesion()">Login</ion-button>
-  </form>
+    <!-- Logo en la parte superior -->
+    <ion-img src="./assets/img/logo.png" alt="Logo" style="width: 150px; margin-bottom: 20px;"></ion-img>
+
+    <!-- Formulario de inicio de sesión -->
+    <div class="login-form">
+      <ion-list lines="none">
+        <!-- Campo de nombre de usuario -->
+        <ion-item>
+          <ion-icon name="mail" slot="start" style="color: #007bff;"></ion-icon>
+          <ion-input type="email" [(ngModel)]="email" name="email" placeholder="Nombre de usuario" required style="--padding-start: 0;"></ion-input>
+        </ion-item>
+
+        <!-- Campo de contraseña -->
+        <ion-item>
+          <ion-icon name="lock-closed" slot="start" style="color: #007bff;"></ion-icon>
+          <ion-input type="password" [(ngModel)]="password" name="password" placeholder="Contraseña" required style="--padding-start: 0;"></ion-input>
+        </ion-item>
+
+        <!-- Botón de ingresar -->
+        <ion-button expand="block" style="margin-top: 15px;">
+          LOGIN
+        </ion-button>
+      </ion-list>
+    </div>
+  </div>
 </ion-content>
