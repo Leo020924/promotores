@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Promotores Nuevo Comienzo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-list>
+        <ion-item button (click)="irALevantamiento()">
+          <ion-label>Levantamiento de reportes e incidencias</ion-label>
+        </ion-item>
+        <ion-item button (click)="irABitacoras()">
+          <ion-label>Bitácoras de actividades</ion-label>
+        </ion-item>
+        <ion-item button (click)="irARegistroComites()">
+          <ion-label>Registro de comités ciudadanos</ion-label>
+        </ion-item>
+        <ion-item button (click)="irADeteccionLideres()">
+          <ion-label>Detección de líderes y simpatizantes</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  
+</ion-content>

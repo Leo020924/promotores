@@ -1,0 +1,94 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Levantamiento de reportes e incidencias</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="reportForm" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">Título</ion-label>
+      <ion-input formControlName="titulo"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Tipo</ion-label>
+      <ion-select formControlName="tipo">
+        <ion-select-option *ngFor="let tipo of tipos" [value]="tipo.nombre">
+          {{ tipo.nombre }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Dependencia</ion-label>
+      <ion-select formControlName="dependencia">
+        <ion-select-option *ngFor="let dependencia of dependencias" [value]="dependencia.id">
+          {{ dependencia }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="floating">Descripción</ion-label>
+      <ion-textarea [counter]="true" maxlength="150" formControlName="descripcion"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Codigo postal</ion-label>
+      <ion-textarea (ionInput)="validateInput($event)" formControlName="cp"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Municipio</ion-label>
+      <ion-textarea formControlName="municipio"></ion-textarea>
+    </ion-item>
+
+    <input type="hidden" formControlName="id_municipio">
+
+    <ion-item>
+      <ion-label position="floating">Colonia</ion-label>
+      <ion-select formControlName="colonia">
+        <ion-select-option *ngFor="let colonia of colonias" [value]="colonia.asentamiento">
+          {{ colonia.asentamiento }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Calle</ion-label>
+      <ion-textarea formControlName="calle" ></ion-textarea>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating">Num. Exterior</ion-label>
+      <ion-textarea  (ionInput)="validateInputExteriorInterior($event)" formControlName="exterior"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Num. Interior</ion-label>
+      <ion-textarea  (ionInput)="validateInputExteriorInterior($event)" formControlName="interior"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Sección</ion-label>
+      <ion-textarea formControlName="seccion"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Subir Evidencia</ion-label>
+      <input type="file" (change)="onFileChange($event)" multiple accept="image/*" />
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Comentarios</ion-label>
+      <ion-textarea formControlName="comentario"></ion-textarea>
+    </ion-item>
+  
+    <ion-button expand="25px" style="display: flex; align-content: center;" type="submit">Enviar Incidencia</ion-button>
+  </form>
+</ion-content>

@@ -1,0 +1,11 @@
+.custom-back-button {
+    --ion-padding-start: 0; /* Ajusta el padding si es necesario */
+  }
+  
+  .custom-back-button ion-icon {
+    font-size: 24px; /* Ajusta el tamaño de la flecha */
+  }
+  
+  .custom-back-button::after {
+    content: ''; /* Oculta el texto */
+  }

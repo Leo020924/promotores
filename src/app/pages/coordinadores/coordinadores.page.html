@@ -1,0 +1,113 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>simpatizantes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="coordinadorForm" (ngSubmit)="onSubmit()">
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">CURP</ion-label>
+        <ion-input 
+          formControlName="curp" 
+          (ionInput)="onCurpChange()">
+        </ion-input>
+      </ion-item>
+      
+
+      <ion-item>
+        <ion-label position="floating">Nombre</ion-label>
+        <ion-input formControlName="nombre"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Apellido Paterno</ion-label>
+        <ion-input formControlName="paterno"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Apellido Materno</ion-label>
+        <ion-input formControlName="materno"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Estado de Nacimiento</ion-label>
+        <ion-input formControlName="estado_nacimiento"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Fecha de Nacimiento</ion-label>
+        <ion-input type="text" formControlName="fecha_nacimiento"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Género</ion-label>
+        <ion-input formControlName="genero"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Clave Electoral</ion-label>
+        <ion-input formControlName="clave_elector"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Vigencia INE</ion-label>
+        <ion-input type="text" formControlName="vigencia_ine"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Correo</ion-label>
+        <ion-input type="email" formControlName="correo"></ion-input>
+      </ion-item>
+
+      <ion-item>
+      <ion-label position="floating">Codigo postal</ion-label>
+      <ion-textarea (ionInput)="validateInput($event)" formControlName="cp"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Municipio</ion-label>
+      <ion-textarea formControlName="municipio"></ion-textarea>
+    </ion-item>
+
+    <input type="hidden" formControlName="id_municipio">
+
+    <ion-item>
+      <ion-label position="floating">Colonia</ion-label>
+      <ion-select formControlName="colonia">
+        <ion-select-option *ngFor="let colonia of colonias" [value]="colonia.asentamiento">
+          {{ colonia.asentamiento }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+      <ion-item>
+        <ion-label position="floating">Calle</ion-label>
+        <ion-input formControlName="calle"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Número Interno</ion-label>
+        <ion-input formControlName="interno"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Número Externo</ion-label>
+        <ion-input formControlName="externo"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Sección</ion-label>
+        <ion-input formControlName="seccion"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">ID Coordinador Alta</ion-label>
+        <ion-input type="text" formControlName="id_coordinador_alta"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <ion-button expand="full" type="submit">Registrar</ion-button>
+  </form>
+</ion-content>
+

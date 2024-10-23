@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Bitácora de Actividades</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="reportForm" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">Nombre de la Actividad</ion-label>
+      <ion-input formControlName="actividad"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Descripción</ion-label>
+      <ion-textarea [counter]="true" maxlength="150" formControlName="descripcion"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Codigo Postal</ion-label>
+      <ion-textarea  formControlName="cp"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Municipio</ion-label>
+      <ion-textarea formControlName="municipio"></ion-textarea>
+    </ion-item>
+
+    <input type="hidden" formControlName="id_municipio">
+
+    <ion-item>
+      <ion-label position="floating">Colonia</ion-label>
+      <ion-select formControlName="colonia">
+        <ion-select-option *ngFor="let colonia of colonias" [value]="colonia.asentamiento">
+          {{ colonia.asentamiento }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Sección</ion-label>
+      <ion-textarea formControlName="seccion"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Comentarios Generales</ion-label>
+      <ion-textarea formControlName="comentarios"></ion-textarea>
+    </ion-item>
+  
+    <ion-button expand="25px" style="display: flex; align-content: center;" type="submit">Registrar bitácora</ion-button>
+  </form>
+</ion-content>

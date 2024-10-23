@@ -1,3 +1,23 @@
-<ion-app>
+<ion-menu side="start" contentId="main-content" menuId="first">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item routerLink="/home">Home</ion-item>
+      <ion-item routerLink="/reportes-incidencias">Levantamiento de reportes e incidencias</ion-item>
+      <ion-item routerLink="/bitacora-actividades">Bitacora de actividades</ion-item>
+      <ion-item routerLink="/comites">Registro de comités ciudadanos</ion-item>
+      <ion-item routerLink="/lideres-simpatizantes">Detección de lideres y simpatizantes</ion-item>
+    </ion-list>
+  </ion-content>
+  <ion-footer>
+    <ion-item button (click)="logout()">Cerrar Sesión</ion-item>
+  </ion-footer>
+</ion-menu>
+
+<ion-app id="main-content">
   <ion-router-outlet></ion-router-outlet>
 </ion-app>

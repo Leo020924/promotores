@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Comités Ciudadanos </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="comiteForm" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">Nombre del comité</ion-label>
+      <ion-input formControlName="nombre"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Descripción</ion-label>
+      <ion-input formControlName="descripcion"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Tipo</ion-label>
+      <ion-input formControlName="tipo"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Codigo postal</ion-label>
+      <ion-textarea (ionInput)="validateInput($event)" formControlName="cp"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Municipio</ion-label>
+      <ion-textarea formControlName="municipio"></ion-textarea>
+    </ion-item>
+
+    <input type="hidden" formControlName="id_municipio">
+
+    <ion-item>
+      <ion-label position="floating">Colonia</ion-label>
+      <ion-select formControlName="colonia">
+        <ion-select-option *ngFor="let colonia of colonias" [value]="colonia.asentamiento">
+          {{ colonia.asentamiento }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="floating">Sección</ion-label>
+      <ion-textarea formControlName="seccion"></ion-textarea>
+    </ion-item>
+
+    <ion-button expand="25px" style="display: flex; align-content: center;" type="submit">Registrar comité</ion-button>
+    
+  </form>
+</ion-content>
