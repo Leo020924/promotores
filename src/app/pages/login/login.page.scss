@@ -1,60 +1,70 @@
-/* Estilos generales para el fondo */
-ion-content {
-    --background: linear-gradient(180deg, #003366 0%, #0044cc 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column; /* Para alinear el logo y el formulario en columna */
+body {
+    font-family: 'Poppins', sans-serif;
   }
-  
-  /* Contenedor del formulario */
-  form {
-    background: rgba(0, 68, 204, 0.2); 
-    padding: 20px;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
-    margin-top: 20px; /* Para separar un poco el formulario del logo */
-  }
-  
-  /* Logo centrado */
-  .header-logo {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  .header-logo img {
-    width: 80px;
-    height: auto;
-  }
-  
-  /* Estilo de los inputs */
-  ion-item {
-    --background: transparent;
-    color: #ffffff;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
-  }
-  
-  ion-label {
-    color: #ffffff;
-    font-weight: 300;
-  }
-  
-  ion-input {
-    color: #ffffff;
-  }
-  
-  /* Botón de login */
-  ion-button {
-    --background: linear-gradient(90deg, #00cfff 0%, #00aaff 100%);
-    --color: #ffffff;
-    border-radius: 50px;
-    margin-top: 20px;
-    font-size: 18px;
-  }
-  
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #0D47A1, #1976D2, #64B5F6); /* Fondo degradado */
+}
+
+ion-icon{
+  color: #000 !important;
+}
+
+.user-avatar {
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: -30px;
+  z-index: 1;
+}
+
+.login-form {
+  width: 90%;
+  max-width: 400px;
+  background: #ffffff;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 40px;
+  text-align: center;
+}
+
+ion-item {
+  --background: transparent;
+  --min-height: 50px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+}
+
+ion-input {
+  --padding-start: 10px;
+}
+
+.remember-me-label {
+  font-size: 14px;
+  color: #007bff;
+}
+
+.forgot-password {
+  font-size: 12px;
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.btn-color {
+  --background: #007bff;
+  --border-radius: 5px;
+  color: #ffffff;
+}
+
+.btn-color:hover {
+  --background: #0056b3;
+}
